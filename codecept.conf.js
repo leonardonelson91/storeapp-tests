@@ -12,11 +12,14 @@ exports.config = {
   output: './output',
   helpers: {
     Appium: {
-      app: 'C:\\Users\\Leonardo\\projects\\StoreApp\\android\\app\\build\\outputs\\apk\\debug\\app-debug.apk',
+      app: '',
       platform: 'Android',
       device: 'emulator',
       noReset: true
     }
+  },
+  include: {
+    productsView: './views/products-view.js'
   },
   bootstrap: null,
   mocha: {},
