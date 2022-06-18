@@ -1,0 +1,15 @@
+{
+  "name": "storeapp-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx codeceptjs run"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "codeceptjs": "^3.3.3",
+    "webdriverio": "^7.20.2"
+  }
+}
