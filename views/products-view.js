@@ -13,18 +13,19 @@ module.exports = {
     goToCartButton: "//android.widget.TextView[contains(@text, 'Go to cart')]",
   },
   isLoaded() {
-    I.waitForVisible("#productListLabel", 10);
-    I.waitForVisible("#productImage", 10);
-    I.waitForVisible("#productTitle", 10);
-    I.waitForVisible("#productDescription", 10);
-    I.waitForVisible("#productPrice", 10);
-    I.waitForVisible("#addProductButton", 10);
+    I.waitForVisible(this.fields.productListLabel, 10);
+    I.waitForVisible(this.fields.productImage, 10);
+    I.waitForVisible(this.fields.productTitle, 10);
+    I.waitForVisible(this.fields.productDescription, 10);
+    I.waitForVisible(this.fields.productPrice, 10);
+    I.waitForVisible(this.fields.addProductButton, 10);
   },
   addProductToCart() {
-    I.tap("#addProductButton");
-    I.waitForVisible("//android.widget.TextView[contains(@text, 'Product added to cart!')]", 10);
-    I.waitForVisible("//android.widget.TextView[contains(@text, 'Keep buying')]", 10);
-    I.waitForVisible("//android.widget.TextView[contains(@text, 'Go to cart')]", 10);
+    I.tap(this.fields.addProductButton);
+    I.waitForVisible(this.fields.addProductSuccessMessage, 10);
+    I.waitForVisible(this.fields.keepBuyingButton, 10);
+    I.waitForVisible(this.fields.goToCartButton, 10);
+    I.tap(this.fields.goToCartButton);
   }
 }
 
